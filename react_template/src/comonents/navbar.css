@@ -2,6 +2,7 @@
     width: 100vw;
     height: auto;
     padding: 0 3vw;
+    position: relative;
     border-bottom: 0.1vw solid red;
 }
 .logo-wrraper{
@@ -21,4 +22,19 @@ nav a{
     font-weight: 900;
     text-decoration: none;
     margin-right: 2vw;
+}
+.submenu{
+    position: absolute;
+    right: 27vw;
+    display: inline-grid;
+    top: 6vw;
+    background-color: #ff000040;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.submenu a{
+    font-size: 1.5vw;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
 }

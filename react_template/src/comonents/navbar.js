@@ -4,13 +4,15 @@ import '../comonents/navbar.css'
 const menu = [
   { menu: "Home" },
   { menu: "About" },
-  { menu: "Services",
-    submenu:[
-      {menuitem:'Web Development'},
-      {menuitem:'Penetration Testing'},
-      {menuitem:'Linux and Servers Security'},
-      {menuitem:'Search Engine Optimization'},
-    ]},
+  {
+    menu: "Services",
+    submenu: [
+      { menuitem: 'Web Development' },
+      { menuitem: 'Penetration Testing' },
+      { menuitem: 'Linux and Servers Security' },
+      { menuitem: 'Search Engine Optimization' },
+    ]
+  },
   { menu: "Hacking" },
   { menu: "Downloads" },
   { menu: "Seminars" },
@@ -28,13 +30,24 @@ const Navbar = () => {
           {menu.map((data, id) => {
             return (
               <>
-              <a className={selected === id ? 'active' : ''} href="#" key={id} onClick={() => {
-                setselected(id);
-              }}>{data.menu}</a>
+                <a className={selected === id ? 'active' : ''} href="#" key={id} onClick={() => {
+                  setselected(id);
+                  console.log(selected);
+                }}>{data.menu}</a>
               </>
             )
           })}
         </nav>
+        <div className='submenu' style={selected !==2? {display:'none'}:{display:'inline-grid'}}>
+          {
+            selected == 2 ?
+              menu[selected].submenu.map((item, id) => {
+                return (
+                  <a href="#" key={id}>{item.menuitem}</a>
+                )
+              }) : <></>
+          }
+        </div>
       </div>
     </>
   )
