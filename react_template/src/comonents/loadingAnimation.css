@@ -1,0 +1,181 @@
+.starting {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Keania One', cursive;
+
+}
+
+.starting::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 50%;
+    width: 100%;
+    background-color: currentColor;
+    animation: topmove 2s 0s forwards;
+}
+
+@keyframes topmove {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: -50%;
+    }
+}
+
+.starting::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 50%;
+    width: 100%;
+    background-color: currentColor;
+    animation: bottommove 2s 0s forwards;
+}
+
+@keyframes bottommove {
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: -50%;
+    }
+}
+
+.starting .word-wrraper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+
+.starting .word-wrraper h1 {
+    color: white;
+    font-size: 5vw;
+    position: relative;
+}
+
+
+.starting .word-wrraper h1:nth-child(3) {
+    animation: bigsize 1s 1.5s forwards;
+}
+
+@keyframes bigsize {
+    0% {
+        font-size: 5vw;
+        color: white;
+    }
+
+    100% {
+        font-size: 12vw;
+        color: red;
+    }
+}
+
+.starting .word-wrraper h1:nth-child(6) {
+    top: 0vw;
+    left: 0vw;
+    animation: movpos 1s 1.5s forwards;
+}
+
+.starting .word-wrraper h1:nth-child(7) {
+    top: 0vw;
+    left: 0vw;
+    animation: movpos 1s 1.5s forwards;
+}
+
+.starting .word-wrraper h1:nth-child(8) {
+    top: 0vw;
+    left: 0vw;
+    animation: movpos 1s 1.5s forwards, chclr 1s 1.5s forwards;
+}
+
+.starting .word-wrraper h1:nth-child(9) {
+    top: 0vw;
+    left: 0vw;
+    animation: movpos 1s 1.5s forwards;
+}
+
+@keyframes movpos {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: -5vw;
+        left: -6vw;
+    }
+}
+
+@keyframes chclr {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+.starting .down {
+    position: absolute;
+    bottom: 4vw;
+    display: inline-grid;
+    opacity: 0%;
+}
+
+.starting .up {
+    position: absolute;
+    bottom: 4vw;
+    display: inline-grid;
+    opacity: 100%;
+    transition-duration: 1s;
+}
+
+.starting .up label {
+    font-size: 1.5vw;
+    color: red;
+    margin-bottom: 1vw;
+}
+
+.starting .up input {
+    border: none;
+    height: 2vw;
+    width: 20vw;
+    color: white;
+    background-color: inherit;
+    border-bottom: 0.1vw solid red;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+.starting .up input:focus {
+    outline: none;
+}
+
+.starting .up button {
+    margin-top: 2vw;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    width: 100%;
+    height: auto;
+    font-weight: 900;
+    font-size: 1vw;
+    font-family: 'Keania One', cursive;
+}

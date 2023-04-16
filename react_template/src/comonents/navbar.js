@@ -1,22 +1,22 @@
-import React from 'react'
-import { useState } from 'react';
 import '../comonents/navbar.css'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 const menu = [
-  { menu: "Home" },
-  { menu: "About" },
+  { menu: "Home", pagelink:'/' },
+  { menu: "About", pagelink:'/About' },
   {
     menu: "Services",
     submenu: [
-      { menuitem: 'Web Development' },
-      { menuitem: 'Penetration Testing' },
-      { menuitem: 'Linux and Servers Security' },
-      { menuitem: 'Search Engine Optimization' },
+      { menuitem: 'Web Development', pagelink:'' },
+      { menuitem: 'Penetration Testing', pagelink:'' },
+      { menuitem: 'Linux and Servers Security', pagelink:'' },
+      { menuitem: 'Search Engine Optimization', pagelink:'' },
     ]
   },
-  { menu: "Hacking" },
-  { menu: "Downloads" },
-  { menu: "Seminars" },
-  { menu: "Contact Us" },
+  { menu: "Hacking", pagelink:'/Hacking' },
+  { menu: "Downloads" , pagelink:'/Downloads'},
+  { menu: "Seminars", pagelink:'/Seminars' },
+  { menu: "Contact Us", pagelink:'/ContactUs' },
 ]
 const Navbar = () => {
   const [selected, setselected] = useState(0)
@@ -30,10 +30,10 @@ const Navbar = () => {
           {menu.map((data, id) => {
             return (
               <>
-                <a className={selected === id ? 'active' : ''} href="#" key={id} onClick={() => {
+                <Link className={selected === id ? 'active' : ''} to={data.pagelink} key={id} onClick={() => {
                   setselected(id);
                   console.log(selected);
-                }}>{data.menu}</a>
+                }}>{data.menu}</Link>
               </>
             )
           })}
@@ -43,7 +43,7 @@ const Navbar = () => {
             selected == 2 ?
               menu[selected].submenu.map((item, id) => {
                 return (
-                  <a href="#" key={id}>{item.menuitem}</a>
+                  <Link to={item.pagelink} key={id}>{item.menuitem}</Link>
                 )
               }) : <></>
           }
