@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import './loadingAnimation.css'
 
 function LoadingAnimation() {
-    const [className, setClassName] = useState('down');
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setClassName("up");
-        }, 2000); // Change class after 2 seconds
-        return () => clearTimeout(timeout);
-    }, []);
-
     const navigate = useNavigate();
     useEffect(()=>{
         const animationTimeout = setTimeout(()=>{
@@ -32,11 +24,6 @@ function LoadingAnimation() {
                     <h1>G</h1>
                     <h1>S</h1>
                 </div>
-                <form className={className}>
-                    <label htmlFor="">Please Enter Your Name</label>
-                    <input type="text" />
-                    <button>Visit Site</button>
-                </form>
             </div>
         </>
     );

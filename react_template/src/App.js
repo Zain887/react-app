@@ -22,7 +22,7 @@ useEffect(() => {
       <Router>
           {showMain ? <Navbar /> : <LoadingAnimation />}
         <Routes>
-          <Route path="/" Component={Home} />
+          <Route path="/" Component={showMain && Home} />
           <Route path="/About" Component={About} />
           <Route path="/Seminars" Component={Seminar} />
           <Route path="/Downloads" Component={Downloads} />
