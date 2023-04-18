@@ -22,15 +22,15 @@ const Navbar = () => {
   const [selected, setselected] = useState(0)
   return (
     <>
-      <div className="nav-wrraper d-flex justify-content-between align-items-end">
-        <div className="logo-wrraper">
+      <div className="nav-wrraper flex">
+        <div className="w-[10vw]">
           <img src="/images/whitelogo.svg" alt="logo" width='100%' height='100%' />
         </div>
         <nav>
           {menu.map((data, id) => {
             return (
               <>
-                <Link className={selected === id ? 'active' : ''} to={data.pagelink} key={id} onClick={() => {
+                <Link className={selected === id ? 'text-red-500' : 'text-white'} to={data.pagelink} key={id} onClick={() => {
                   setselected(id);
                   console.log(selected);
                 }}>{data.menu}</Link>

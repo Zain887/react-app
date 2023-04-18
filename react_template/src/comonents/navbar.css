@@ -1,4 +1,4 @@
-.nav-wrraper {
+/* .nav-wrraper {
     width: 100vw;
     height: auto;
     padding: 0 3vw;
@@ -11,7 +11,7 @@
     width: 100vw;
     position: absolute;
     animation: linebar 2s 0s forwards;
-    border-bottom: 0.2vw solid red;
+    border-bottom: 0.2vw solid red; 
 }
 @keyframes linebar {
     0% {
@@ -58,4 +58,4 @@ nav a {
     color: white;
     font-weight: 900;
     text-decoration: none;
-}
+} */

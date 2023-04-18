@@ -8,19 +8,20 @@ import Contact from "./webPages/Contact";
 import LoadingAnimation from "./comonents/loadingAnimation";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import Footer from "./comonents/Footer";
 function App() {
   const [showMain, setShowMain] = useState(false);
 
-useEffect(() => {
-  setTimeout(() => {
-    setShowMain(true);
-  }, 4000); // 4000 milliseconds or 3 seconds
-}, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowMain(true);
+    }, 4000); // 4000 milliseconds or 3 seconds
+  }, []);
   return (
 
     <>
       <Router>
-          {showMain ? <Navbar /> : <LoadingAnimation />}
+        {showMain ? <Navbar /> : <LoadingAnimation />}
         <Routes>
           <Route path="/" Component={showMain && Home} />
           <Route path="/About" Component={About} />
@@ -29,6 +30,7 @@ useEffect(() => {
           <Route path="/Hacking" Component={Hacking} />
           <Route path="/ContactUs" Component={Contact} />
         </Routes>
+        {showMain ? <Footer /> : <LoadingAnimation />}
       </Router>
     </>
   );
