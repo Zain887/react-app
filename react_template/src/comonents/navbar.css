@@ -3,7 +3,7 @@
     height: auto;
     padding: 0 3vw;
     position: relative;
-}
+} */
 .nav-wrraper::after {
     right: 0;
     top: 5.5vw;
@@ -22,20 +22,20 @@
     }
 }
 
-.logo-wrraper {
+/* .logo-wrraper {
     height: auto;
     width: 10vw;
-}
+} */
 
-nav a {
+/* nav a {
     font-size: 1.5vw;
     color: white;
     font-weight: 900;
     text-decoration: none;
     margin-right: 2vw;
-}
+} */
 
-.active {
+/* .active {
     font-size: 1.5vw;
     color: red;
     font-weight: 900;

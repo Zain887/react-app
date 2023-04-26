@@ -22,7 +22,7 @@ const Navbar = () => {
   const [selected, setselected] = useState(0)
   return (
     <>
-      <div className="nav-wrraper flex">
+      <div className="nav-wrraper flex justify-between items-center">
         <div className="w-[10vw]">
           <img src="/images/whitelogo.svg" alt="logo" width='100%' height='100%' />
         </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
           {menu.map((data, id) => {
             return (
               <>
-                <Link className={selected === id ? 'text-red-500' : 'text-white'} to={data.pagelink} key={id} onClick={() => {
+                <Link className={selected === id ? 'text-red-500 text-2xl font-bold mr-10' : 'text-white text-2xl font-bold mr-10'} to={data.pagelink} key={id} onClick={() => {
                   setselected(id);
                   console.log(selected);
                 }}>{data.menu}</Link>
