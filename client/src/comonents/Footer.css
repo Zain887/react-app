@@ -1,0 +1,7 @@
+footer{
+    height: 5vw;
+    width: 100vw;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+}

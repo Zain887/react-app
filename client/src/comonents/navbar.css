@@ -1,0 +1,61 @@
+/* .nav-wrraper {
+    width: 100vw;
+    height: auto;
+    padding: 0 3vw;
+    position: relative;
+} */
+.nav-wrraper::after {
+    right: 0;
+    top: 5.5vw;
+    content: "";
+    width: 100vw;
+    position: absolute;
+    animation: linebar 2s 0s forwards;
+    border-bottom: 0.2vw solid red; 
+}
+@keyframes linebar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100vw;
+    }
+}
+
+/* .logo-wrraper {
+    height: auto;
+    width: 10vw;
+} */
+
+/* nav a {
+    font-size: 1.5vw;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    margin-right: 2vw;
+} */
+
+/* .active {
+    font-size: 1.5vw;
+    color: red;
+    font-weight: 900;
+    text-decoration: none;
+    margin-right: 2vw;
+}
+
+.submenu {
+    position: absolute;
+    right: 27vw;
+    display: inline-grid;
+    top: 6vw;
+    background-color: #ff000040;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.submenu a {
+    font-size: 1.5vw;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+} */
